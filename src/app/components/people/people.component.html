@@ -1,0 +1,11 @@
+<ul class="persons">
+  <li *ngFor="let p of persons; let i=index;">
+    <a routerLink="/person-details/{{p.url}}">
+      <span class="badge">{{i+1}}</span>Nombre:{{p.name}}
+    </a>
+  </li>
+</ul>
+<button (click)="orderByName()">Ordenar por nombre</button>
+<button type="button" name="button" (click)="orderByMass()">Ordenar por Peso</button>
+<button type="button" name="button"  (click)="orderByHeight()">Ordenar por Altura</button>
+<button type="button" name="button"  (click)="orderByHomeWorld()">Ordenar por Planeta</button>
